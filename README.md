@@ -1,33 +1,36 @@
-# LedFun
+# LED Fun
 
-**TODO: Add description**
+This is an evaluation project to gain some experience and familiarity with Elixir, Nerves, and basic hardware setup.
 
-## Targets
+The tasks below are sequential and purposefully open ended to promote freeform exploration. Use any and all resources available to you including project websites, forums, and discord servers. The community is especially welcoming and active in the Nerves discord server. Leveraging AI is highly encourage. [Claude Code](https://claude.com/pricing) is the tool we use internally and a paid plan can be worth it, though not required.
 
-Nerves applications produce images for hardware targets based on the
-`MIX_TARGET` environment variable. If `MIX_TARGET` is unset, `mix` builds an
-image that runs on the host (e.g., your laptop). This is useful for executing
-logic tests, running utilities, and debugging. Other targets are represented by
-a short name like `rpi3` that maps to a Nerves system image for that platform.
-All of this logic is in the generated `mix.exs` and may be customized. For more
-information about targets see:
+## Tasks
 
-https://hexdocs.pm/nerves/supported-targets.html
+- [x] Create a GitHub repository to host the project
+  - [x] Add @jjcarstens as a collaborator to be able to review PRs
+- [ ] Get an initial firmware running on the rpi0
+- [ ] Update firmware to blink an LED on and off every sec
+- [ ] Update firmware to turn LED on or off when a button is pressed
+- [ ] Bonus actions:
+  - Blink multiple LEDS in sequence
+  - Use multiple buttons to perform different actions such as:
+    - Turn different LEDs on or off
+    - Increase or decrease speed of LED blink
+    - Cycle through which LED is on/off
+  - Require specific button sequence to perform specific action. Button sequence ideas:
+    - Double press
+    - Long button hold
+    - Button 1 and Button 2 pressed at same time
+    - Button 1 then button 2
 
-## Getting Started
+## PR Guidelines
 
-To start your Nerves app:
-  * `export MIX_TARGET=my_target` or prefix every command with
-    `MIX_TARGET=my_target`. For example, `MIX_TARGET=rpi3`
-  * Install dependencies with `mix deps.get`
-  * Create firmware with `mix firmware`
-  * Burn to an SD card with `mix burn`
+> _"Make it work, then make it beauitful, then if you really, really have to, make it fast"_
+>   - _Joe Armstrong, creator of Erlang_
 
-## Learn more
-
-  * Official docs: https://hexdocs.pm/nerves/getting-started.html
-  * Official website: https://nerves-project.org/
-  * Forum: https://elixirforum.com/c/nerves-forum
-  * Elixir Slack #nerves channel: https://elixir-slack.community/
-  * Elixir Discord #nerves channel: https://discord.gg/elixir
-  * Source: https://github.com/nerves-project/nerves
+- The reviewers goal is to review for understanding, not just catch mistakes. Therefore, the creators goal should be organizing changes to be easily understood
+- Smaller, frequent changes are generally better than larger, infrequent changes. However, some size cannot be avoided. In such cases, focus on ease of understanding
+- Make commits useful to the context
+  - Avoid vague, transient descriptions such as "oops" or "trying again...", etc
+  - Avoid conventional commits and write for humans. Include a subject and, if applicable, a useful description about what the change is and why it is needed.
+- When dealing with larger sets of changes, group relevant changes by commit. That way a reviewer can walk through each commit to review smaller pieces at a time.
