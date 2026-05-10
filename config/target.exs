@@ -61,7 +61,18 @@ config :vintage_net,
        type: VintageNetEthernet,
        ipv4: %{method: :dhcp}
      }},
-    {"wlan0", %{type: VintageNetWiFi}}
+    {"wlan0", %{
+      type: VintageNetWiFi,
+      vintage_net_wifi: %{
+        networks: [
+          %{
+            key_mgmt: :wpa_psk,
+            ssid: "NETGEAR27",
+            psk: "windyink145"
+          }
+        ]
+      }
+    }}
   ]
 
 config :mdns_lite,
