@@ -9,7 +9,7 @@ The tasks below are sequential and purposefully open ended to promote freeform e
 - [x] Create a GitHub repository to host the project
   - [x] Add @jjcarstens as a collaborator to be able to review PRs
 - [x] Get an initial firmware running on the rpi0
-- [ ] Update firmware to blink an LED on and off every sec
+- [x] Update firmware to blink an LED on and off every sec
 - [ ] Update firmware to turn LED on or off when a button is pressed
 - [ ] Bonus actions:
   - Blink multiple LEDS in sequence
