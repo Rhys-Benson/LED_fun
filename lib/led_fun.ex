@@ -1,15 +1,14 @@
 defmodule LedFun do
   @moduledoc """
   Documentation for `LedFun`.
+
+  - blinky assumes gpio pin is open. pin arg is the reference returned by Circuits.GPIO.open/2
+    secs arg specifies number of seconds the function will run.
   """
   alias Circuits.GPIO
 
 
-  #blinky assumes gpio pin is open. pin arg is the reference returned by Circuits.GPIO.open/2
-  #secs specifies number of seconds the function will run.
-  def blinky(pin, secs, state \\ 0)
-
-  def blinky(pin, secs, state) do
+  def blinky(pin, secs, state \\ 0) do
     if secs > 0 do
       new_state = case state do
         0 ->
