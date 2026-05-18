@@ -9,9 +9,7 @@ defmodule LedFun.Application do
   def start(_type, _args) do
     children =
       [
-        # Children for all targets
-        # Starts a worker by calling: LedFun.Worker.start_link(arg)
-        # {LedFun.Worker, arg},
+        LedFun.OneButton
       ] ++ target_children()
 
     # See https://hexdocs.pm/elixir/Supervisor.html
