@@ -9,7 +9,8 @@ defmodule LedFun.Application do
   def start(_type, _args) do
     children =
       [
-        LedFun.OneButton
+        #LedFun.OneButton
+        #LedFun.Blinky
       ] ++ target_children()
 
     # See https://hexdocs.pm/elixir/Supervisor.html
